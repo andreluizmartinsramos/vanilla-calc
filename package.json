@@ -1,0 +1,17 @@
+{
+    "name": "awesome-calc",
+    "version": "1.0.0",
+    "description": "Awesome Calculator",
+    "repository": {
+        "type": "git",
+        "url": "git+https://andreluizmr@bitbucket.org/andreluizmr/awesome-calc.git"
+    },
+    "author": "André Luiz Martins Ramos",
+    "license": "ISC",
+    "homepage": "https://bitbucket.org/andreluizmr/awesome-calc#readme",
+    "devDependencies": {
+        "eslint": "^5.9.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-import": "^2.14.0"
+    }
+}
