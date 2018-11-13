@@ -8,7 +8,7 @@ Follow the steps bellow to enjoy it:
 
 Note: You must to type the commands into the "root project" folder.
 
-### 1.1 Install
+### 1.1 Install dependencies
 
 To install all dependencies of the project
 
@@ -38,7 +38,7 @@ $ http-server
 #### 1.3.1 Access the Awesome Calculator
 
 ```bash
-Browser: localhost:8080
+http://localhost:8080
 ```
 
 #### 1.3.2 JSDoc
@@ -46,22 +46,23 @@ Browser: localhost:8080
 To see all JS documentation
 
 ```bash
-Browser: localhost:8080/out
+http://localhost:8080/out
 ```
 
 To generate doc (It doesn't necessary if you don't changed)
 
 ```bash
-jsdoc .
+$ jsdoc .
 ```
 
 ## 2. Instructions To develop
 
 Front-end Awesome Calcultor - development tools & aproaches.
 
-#### 2.1 IDE:
+#### 2.1 IDE & Runtime:
 
--   VSCode
+-   VSCode (https://code.visualstudio.com/download)
+-   Node.js (https://nodejs.org/en/download/)
 
 #### 2.2 Extentions:
 
