@@ -20,6 +20,19 @@
   font-size: 16px;
 }
 
+.label-default, .mortgage-row__label {
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.flex-center, .mortgage-row__wrapper-input, .wrapper-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /**
  * Global Settings
  */
@@ -35,10 +48,6 @@
 /**
  * Specific Style
  */
-.wrapper-page {
-  display: flex;
-  justify-content: center;
-}
 .wrapper-page__wrapper-util {
   width: 900px;
   padding: 10px 30px;
@@ -73,10 +82,6 @@
   display: flex;
 }
 
-.mortgage-row__wrapper-input {
-  display: flex;
-  align-items: center;
-}
 .mortgage-row__value {
   width: 60px;
   margin-left: 15px;
@@ -84,12 +89,6 @@
 .mortgage-row__range {
   flex: 1;
   margin: 0 15px;
-}
-.mortgage-row__label {
-  display: flex;
-  width: 100%;
-  font-size: 14px;
-  font-weight: bold;
 }
 .mortgage-row span {
   opacity: 0.8;

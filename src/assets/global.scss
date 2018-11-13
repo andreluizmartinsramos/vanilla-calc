@@ -28,6 +28,16 @@ $m_highlightColor: #006ea0;
 }
 
 .label-default {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /**
@@ -48,8 +58,7 @@ $m_highlightColor: #006ea0;
  */
 
 .wrapper-page {
-    display: flex;
-    justify-content: center;
+    @extend .flex-center;
 
     &__wrapper-util {
         width: 900px;
@@ -94,8 +103,7 @@ $m_highlightColor: #006ea0;
 
 .mortgage-row {
     &__wrapper-input {
-        display: flex;
-        align-items: center;
+        @extend .flex-center;
     }
     &__value {
         @extend .input-text-default;
@@ -107,10 +115,7 @@ $m_highlightColor: #006ea0;
         margin: 0 15px;
     }
     &__label {
-        display: flex;
-        width: 100%;
-        font-size: 14px;
-        font-weight: bold;
+        @extend .label-default;
     }
     span {
         opacity: 0.8;
