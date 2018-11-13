@@ -89,7 +89,7 @@ Front-end Awesome Calcultor - development tools & aproaches.
 You just need watch the SASS preprocessing:
 
 ```
-sass --watch ./assets/global.scss ./assets/output.css
+sass --watch ./src/assets/global.scss ./src/assets/output.css
 ```
 
 #### 2.7 Concepts adopted:
