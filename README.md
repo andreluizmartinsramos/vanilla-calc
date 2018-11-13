@@ -1,50 +1,74 @@
 # Awesome Calculator
 
-## Install all dependencies
+The project must be developed in pure HTML/SCSS and JS as well as matched with: https://zpl.io/a30O96N.
+
+## To run
+
+Follow the steps bellow to enjoy it:
+
+Note: You must to type the commands into the "root project" folder.
+
+### 1- Install
+
+To install all dependencies of the project
 
 ```bash
 $ npm install
 ```
 
-## Install http server to load the page
+### 2- Install http server
+
+To load the page
 
 ```bash
 $ npm http-server
 ```
 
-## Up the server
+### 3 - Up the server
+
+Expose the project folder
 
 ```bash
 $ http-server
 ```
 
-## Enjoy the project
+### 4- Enjoy it!
+
+Awesome Calculator
 
 ```bash
 $ localhost:8080
 ```
 
-# Front-end - Dev Aproach
+JSDoc
+
+```bash
+$ localhost:8080/out
+```
+
+## To develop
+
+Front-end - Devevelopment Aproaches
 
 ### IDE:
 
 VSCode
 
-## Extentions:
+### Extentions:
 
-> ESlint (Airbnb Style Guide)
-> Prettier
-> SCSS IntelliSense
-> EditorConfig
+ESlint (Airbnb Style Guide)
+Prettier
+SCSS IntelliSense
+EditorConfig
 
-## User Settings (Prettier)
+### User Settings (Prettier)
 
 > "prettier.eslintIntegration": true
 
-## User Settings (Editor Config)
+### User Settings (Editor Config)
 
 > "editor.formatOnSave": true,
 
-## Chrome Extentions:
+### Chrome Extentions:
 
-> ColorZilla
+ColorZilla
