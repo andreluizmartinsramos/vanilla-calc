@@ -26,9 +26,9 @@ $ localhost:8080
 
 # Front-end - Dev Aproach
 
-## IDE:
+### IDE:
 
-> VSCode
+VSCode
 
 ## Extentions:
 
