@@ -8,7 +8,7 @@ Follow the steps bellow to enjoy it:
 
 Note: You must to type the commands into the "root project" folder.
 
-### 1- Install
+### 1 - Install
 
 To install all dependencies of the project
 
@@ -18,17 +18,14 @@ $ npm install
 
 Boirlerplate:
 
--   ESlint
+-   ESLint
+-   Jest
+-   JSDoc
+-   SASS
+-   HTTPServer
+-   DocDash
 
-### 2- Install http server
-
-To install simple server http
-
-```bash
-$ npm http-server
-```
-
-### 3 - Up the server
+### 2 - Up the server
 
 Expose the project folder
 
@@ -36,7 +33,7 @@ Expose the project folder
 $ http-server
 ```
 
-### 4- Enjoy it!
+### 3 - Enjoy it!
 
 #### Awesome Calculator
 
@@ -60,7 +57,7 @@ jsdoc .
 
 ## Instructions To develop
 
-Front-end Awesome Calcultor - development boilerplate
+Front-end Awesome Calcultor - development tools & aproaches.
 
 #### IDE:
 
@@ -68,8 +65,8 @@ Front-end Awesome Calcultor - development boilerplate
 
 #### Extentions:
 
--   ESlint (Airbnb Style Guide)
--   Prettier
+-   ESlint Plugin (Airbnb Style Guide)
+-   Prettier Plugin
 -   SCSS IntelliSense
 -   EditorConfig
 
