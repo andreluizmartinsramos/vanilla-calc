@@ -37,13 +37,13 @@ $ http-server
 #### Awesome Calculator
 
 ```bash
-$ localhost:8080
+Browser: localhost:8080
 ```
 
 #### JSDoc
 
 ```bash
-$ localhost:8080/out
+Browser: localhost:8080/out
 ```
 
 ## To develop
