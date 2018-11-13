@@ -1,9 +1,32 @@
-* {
-    background: red;
+/**
+ * Variables
+ */
+
+$colorDefault: #006ea0;
+
+@font-face {
+    font-family: "HelveticaNeue";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Helvetica Neue Medium"),
+        url("./fonts/HelveticaNeue-Thin.woff") format("woff");
 }
 
-body {
-    p {
-        background: pink;
-    }
+/**
+ * Global Settings
+ */
+
+* {
+    font-family: HelveticaNeue;
+}
+
+/**
+ * Specific Style
+ */
+
+.title {
+    font-weight: 0;
+    letter-spacing: 0.5;
+    font-size: 20px;
+    color: $colorDefault;
 }
