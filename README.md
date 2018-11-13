@@ -70,6 +70,7 @@ Front-end Awesome Calcultor - development tools & aproaches.
 -   Prettier Plugin
 -   SCSS IntelliSense
 -   EditorConfig
+-   LiveServer
 
 #### 2.3 VSCode: User Settings (Prettier)
 
@@ -82,7 +83,6 @@ Front-end Awesome Calcultor - development tools & aproaches.
 #### 2.5 Chrome Extentions:
 
 -   ColorZilla
--   LiveReload
 
 #### 2.6 Finally:
 
