@@ -16,6 +16,10 @@ To install all dependencies of the project
 $ npm install
 ```
 
+Boirlerplate:
+
+-   ESlint
+
 ### 2- Install http server
 
 To install simple server http
@@ -54,9 +58,9 @@ To generate doc (It doesn't necessary if you don't changed)
 jsdoc .
 ```
 
-## To develop
+## Instructions To develop
 
-Front-end - Devevelopment Aproaches
+Front-end Awesome Calcultor - development boilerplate
 
 #### IDE:
 
@@ -81,6 +85,16 @@ Front-end - Devevelopment Aproaches
 
 -   ColorZilla
 -   LiveReload
+
+#### Finally:
+
+You just need watch the SASS preprocessing:
+
+```
+sass --watch ./assets/global.scss ./assets/output.css
+```
+
+##### Good codding!
 
 ## To Test
 
