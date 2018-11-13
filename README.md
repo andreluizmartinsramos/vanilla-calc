@@ -1,44 +1,50 @@
-## Awesome Calculator
+# Awesome Calculator
 
-# To run
+## Install all dependencies
 
-\$ npm install
+```bash
+$ npm install
+```
 
-> Install all dependencies
+## Install http server to load the page
 
-\$ npm http-server
+```bash
+$ npm http-server
+```
 
-> Install http server to load the page
+## Up the server
 
-\$ http-server
+```bash
+$ http-server
+```
 
-> Up the server
+## Enjoy the project
 
-\$ localhost:8080
+```bash
+$ localhost:8080
+```
 
-> Enjoy the project
+# Front-end - Dev Aproach
 
-# To Develop
-
-#IDE:
+## IDE:
 
 > VSCode
 
-# Extentions:
+## Extentions:
 
 > ESlint (Airbnb Style Guide)
 > Prettier
 > SCSS IntelliSense
 > EditorConfig
 
-# User Settings (Prettier)
+## User Settings (Prettier)
 
 > "prettier.eslintIntegration": true
 
-# User Settings (Editor Config)
+## User Settings (Editor Config)
 
 > "editor.formatOnSave": true,
 
-# Chrome Extentions:
+## Chrome Extentions:
 
 > ColorZilla
