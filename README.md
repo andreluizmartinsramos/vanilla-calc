@@ -92,6 +92,12 @@ You just need watch the SASS preprocessing:
 sass --watch ./assets/global.scss ./assets/output.css
 ```
 
+#### 2.7 Concepts adopted:
+
+-   JavaScript - AirBNB Style Guide (https://github.com/airbnb/javascript)
+-   BEM Convention CSS - Block, Element Modifier (http://getbem.com/)
+-   SCRUM Agile Method (http://scrummethodology.com/)
+
 ##### Good codding!
 
 ## 3. To Test
@@ -99,7 +105,7 @@ sass --watch ./assets/global.scss ./assets/output.css
 It was used the Jest - Delightful JavaScript Testing.
 
 -   All tests are kept in /test folder
--   It was mamed following: /src/main.js > /test/main.test.js
+-   It was named following the pattern: /src/main.js > /test/main.test.js
 
 To load the tests use the command bellow:
 
