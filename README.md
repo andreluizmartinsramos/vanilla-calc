@@ -1,6 +1,6 @@
 # Awesome Calculator
 
-The project must be developed in pure HTML/SCSS and JS as well as matched with: https://zpl.io/a30O96N.
+The project was developed in pure HTML/SCSS and JS as well as matched with: https://zpl.io/a30O96N.
 
 ## To run
 
@@ -18,7 +18,7 @@ $ npm install
 
 ### 2- Install http server
 
-To load the page
+To install simple server http
 
 ```bash
 $ npm http-server
@@ -34,13 +34,13 @@ $ http-server
 
 ### 4- Enjoy it!
 
-Awesome Calculator
+#### Awesome Calculator
 
 ```bash
 $ localhost:8080
 ```
 
-JSDoc
+#### JSDoc
 
 ```bash
 $ localhost:8080/out
