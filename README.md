@@ -52,23 +52,23 @@ Front-end - Devevelopment Aproaches
 
 ### IDE:
 
-VSCode
+-   VSCode
 
 ### Extentions:
 
-ESlint (Airbnb Style Guide)
-Prettier
-SCSS IntelliSense
-EditorConfig
+-   ESlint (Airbnb Style Guide)
+-   Prettier
+-   SCSS IntelliSense
+-   EditorConfig
 
 ### User Settings (Prettier)
 
-> "prettier.eslintIntegration": true
+-   "prettier.eslintIntegration": true
 
 ### User Settings (Editor Config)
 
-> "editor.formatOnSave": true,
+-   "editor.formatOnSave": true,
 
 ### Chrome Extentions:
 
-ColorZilla
+-   ColorZilla
