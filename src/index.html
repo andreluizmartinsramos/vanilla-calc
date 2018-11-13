@@ -9,9 +9,58 @@
         <link rel="stylesheet" href="./assets/reset.css" />
     </head>
     <body>
-        <div>
-            <header><h1 class="title">Mortgage Calculator</h1></header>
-            <main></main>
+        <div class="wrapper-page">
+            <div class="wrapper-page__wrapper-util">
+                <!-- HEADER -->
+                <header>
+                    <h1 class="wrapper-page__title">Mortgage Calculator</h1>
+                </header>
+
+                <!-- MAIN -->
+                <main class="wrapper-page__main">
+                    <div class="calculator">
+                        <h2 class="calculator__title">
+                            Change values to calculate your results
+                        </h2>
+
+                        <div class="calculator__row mortgage-row">
+                            <label class="mortgage-row__label"
+                                >Years of Mortgage</label
+                            >
+                            <div class="mortgage-row__wrapper-input">
+                                <span>1</span>
+                                <input
+                                    type="range"
+                                    class="mortgage-row__range"
+                                />
+                                <span>40</span>
+                                <input
+                                    type="text"
+                                    class="mortgage-row__value"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="calculator__row mortgage-row">
+                            <label class="mortgage-row__label"
+                                >Years of Mortgage</label
+                            >
+                            <div class="mortgage-row__wrapper-input">
+                                <span>1</span>
+                                <input
+                                    type="range"
+                                    class="mortgage-row__range"
+                                />
+                                <span>40</span>
+                                <input
+                                    type="text"
+                                    class="mortgage-row__value"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
         </div>
     </body>
     <script src="main.js"></script>
