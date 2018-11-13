@@ -2,13 +2,13 @@
 
 The project was developed in pure HTML/SCSS and JS as well as matched with: https://zpl.io/a30O96N.
 
-## To run
+## 1. To run
 
 Follow the steps bellow to enjoy it:
 
 Note: You must to type the commands into the "root project" folder.
 
-### 1 - Install
+### 1.1 Install
 
 To install all dependencies of the project
 
@@ -25,7 +25,7 @@ Boirlerplate:
 -   HTTPServer
 -   DocDash
 
-### 2 - Up the server
+### 1.2 Up the server
 
 Expose the project folder
 
@@ -33,15 +33,15 @@ Expose the project folder
 $ http-server
 ```
 
-### 3 - Enjoy it!
+### 1.3 Enjoy it!
 
-#### Awesome Calculator
+#### 1.3.1 Access the Awesome Calculator
 
 ```bash
 Browser: localhost:8080
 ```
 
-#### JSDoc
+#### 1.3.2 JSDoc
 
 To see all JS documentation
 
@@ -55,35 +55,35 @@ To generate doc (It doesn't necessary if you don't changed)
 jsdoc .
 ```
 
-## Instructions To develop
+## 2. Instructions To develop
 
 Front-end Awesome Calcultor - development tools & aproaches.
 
-#### IDE:
+#### 2.1 IDE:
 
 -   VSCode
 
-#### Extentions:
+#### 2.2 Extentions:
 
 -   ESlint Plugin (Airbnb Style Guide)
 -   Prettier Plugin
 -   SCSS IntelliSense
 -   EditorConfig
 
-#### VSCode: User Settings (Prettier)
+#### 2.3 VSCode: User Settings (Prettier)
 
 -   "prettier.eslintIntegration": true
 
-#### VSCode: User Settings (Editor Config)
+#### 2.4 VSCode: User Settings (Editor Config)
 
 -   "editor.formatOnSave": true,
 
-#### Chrome Extentions:
+#### 2.5 Chrome Extentions:
 
 -   ColorZilla
 -   LiveReload
 
-#### Finally:
+#### 2.6 Finally:
 
 You just need watch the SASS preprocessing:
 
@@ -93,7 +93,7 @@ sass --watch ./assets/global.scss ./assets/output.css
 
 ##### Good codding!
 
-## To Test
+## 3. To Test
 
 It was used the Jest - Delightful JavaScript Testing.
 
