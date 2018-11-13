@@ -3,6 +3,6 @@
  * @function func
  * @param {string} text - Text will be showed on consolge
  */
-const func = text => console.log(text);
+const func = text => text;
 
-func('Testing the func...');
+module.exports = func;

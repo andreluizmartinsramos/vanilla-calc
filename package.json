@@ -13,9 +13,13 @@
         "eslint": "^5.9.0",
         "eslint-config-airbnb-base": "^13.1.0",
         "eslint-plugin-import": "^2.14.0",
+        "jest": "^23.6.0",
         "jsdoc": "~3.5.5"
     },
     "dependencies": {
         "docdash": "^1.0.0"
+    },
+    "scripts": {
+        "test": "jest"
     }
 }

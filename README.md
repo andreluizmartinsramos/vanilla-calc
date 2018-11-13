@@ -42,8 +42,16 @@ Browser: localhost:8080
 
 #### JSDoc
 
+To see all JS documentation
+
 ```bash
 Browser: localhost:8080/out
+```
+
+To generate doc (It doesn't necessary if you don't changed)
+
+```bash
+jsdoc .
 ```
 
 ## To develop
@@ -61,11 +69,11 @@ Front-end - Devevelopment Aproaches
 -   SCSS IntelliSense
 -   EditorConfig
 
-#### User Settings (Prettier)
+#### VSCode: User Settings (Prettier)
 
 -   "prettier.eslintIntegration": true
 
-#### User Settings (Editor Config)
+#### VSCode: User Settings (Editor Config)
 
 -   "editor.formatOnSave": true,
 
@@ -73,3 +81,16 @@ Front-end - Devevelopment Aproaches
 
 -   ColorZilla
 -   LiveReload
+
+## To Test
+
+It was used the Jest - Delightful JavaScript Testing.
+
+-   All tests are kept in /test folder
+-   It was mamed following: /src/main.js > /test/main.test.js
+
+To load the tests use the command bellow:
+
+```
+npm test
+```
