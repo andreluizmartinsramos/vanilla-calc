@@ -38,11 +38,13 @@ class Range {
       // Control the current value for CSS layer apply the mask
       this.inputRange.style.setProperty('--val', +this.inputRange.value);
 
+      let currentValue = (parseInt(this.inputRange.value) === 0) ? 1 : this.inputRange.value;
+
       // Insert the current value into the input target regarding the round rule.
       if (this.round) {
-        document.querySelector(this.inputBox).value = Math.round((this.inputRange.value * this.maxNumber) / 100);
+        document.querySelector(this.inputBox).value = Math.ceil((currentValue * this.maxNumber) / 100);
       } else {
-        document.querySelector(this.inputBox).value = (this.inputRange.value * this.maxNumber) / 100;
+        document.querySelector(this.inputBox).value = (currentValue * this.maxNumber) / 100;
       }
     }, false);
   }
