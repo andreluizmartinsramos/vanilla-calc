@@ -1,5 +1,5 @@
 /**
- * Variables
+ * Variables & Mixins
  */
 
 $default-color: #3e3d3f;
@@ -8,27 +8,32 @@ $m_highlight-color: #006ea0;
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
-.title-line {
+@mixin title-line() {
     padding: 0 0 15px 0;
     border-bottom: 1px solid #cacaca;
 }
 
-.input-text-default {
+@mixin input-text-default() {
     height: 45px;
     border-radius: 4px;
     border: 1px solid #cacaca;
     padding: 20px;
     font-size: 16px;
+
+    &:focus {
+        border-color: $default-color;
+        box-shadow: 0 0 4px 0 rgba(62, 61, 63, 0.62);
+    }
 }
 
-.label-default {
+@mixin label-default() {
     display: flex;
     width: 100%;
     font-size: 14px;
     font-weight: 700;
 }
 
-.flex-center {
+@mixin flex-center() {
     display: flex;
     align-items: center;
 }
@@ -51,7 +56,7 @@ $m_highlight-color: #006ea0;
  */
 
 .wrapper-page {
-    @extend .flex-center;
+    @include flex-center;
 
     &__wrapper-util {
         width: 900px;
@@ -59,7 +64,7 @@ $m_highlight-color: #006ea0;
     }
 
     &__title {
-        @extend .title-line;
+        @include title-line;
         letter-spacing: 0.5px;
         font-size: 20px;
         color: $higlight-color;
@@ -79,52 +84,87 @@ $m_highlight-color: #006ea0;
     box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
 
     &__title {
-        @extend .title-line;
+        @include title-line;
         border-color: #cfcfcf;
         font-weight: 1;
+        margin-bottom: 35px;
     }
 
     &__row {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        margin-top: 35px;
+        margin-top: 20px;
     }
     &__wrapper-input {
         display: flex;
     }
+    &__label {
+        @include label-default;
+    }
 }
 
+.interest-row,
 .mortgage-row {
+    span {
+        opacity: 0.7;
+        width: 40px;
+    }
     &__wrapper-input {
-        @extend .flex-center;
+        @include flex-center;
     }
     &__value {
-        @extend .input-text-default;
+        @include input-text-default;
         width: 70px;
         margin-left: 15px;
     }
-    .rangeMortgage1,
+    .rangeInterest,
     .rangeMortgage {
         flex: 1;
-        //margin: 0 20px !important;
-        &__leftBullet {
-            text-align: left;
-        }
-
-        &__rightBullet {
-            text-align: right;
-        }
     }
-    &__label {
-        @extend .label-default;
-    }
-    span {
-        opacity: 0.8;
-        width: 40px;
+    &__leftBullet {
         text-align: left;
     }
+
+    &__rightBullet {
+        text-align: right;
+    }
 }
+
+.annual-row,
+.loan-row {
+    &__wrapper-input {
+        position: relative;
+        .mask-cash {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-weight: bold;
+        }
+    }
+    &__value {
+        @include input-text-default;
+        margin: 5px 0;
+        width: 100%;
+        padding-left: 35px;
+    }
+}
+
+.annual-row {
+    flex-direction: row;
+
+    &__col1 {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    &__col2 {
+        flex: 1;
+        margin-left: 10px;
+    }
+}
+
+
 
 /**
 *   Range Decorator

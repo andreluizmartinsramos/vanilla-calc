@@ -23,42 +23,49 @@
                         <h2 class="calculator__title">Change values to calculate your results</h2>
 
                         <div class="calculator__row mortgage-row">
-                            <label class="mortgage-row__label">Years of Mortgage</label>
+                            <label class="calculator__label">Years of Mortgage</label>
                             <div class="mortgage-row__wrapper-input">
-                                <span class="rangeMortgage__leftBullet">1</span>
+                                <span class="mortgage-row__leftBullet">1</span>
                                 <input class="rangeMortgage" type="range" style="--min: 1;--max: 100;--val: 75;" value="75" />
-                                <span class="rangeMortgage__rightBullet">40</span>
+                                <span class="mortgage-row__rightBullet">40</span>
                                 <input type="text" class="mortgage-row__value rangeMortgage__value" readonly  value="30" />
                             </div>
-                        </div>
 
-                        <!-- <div class="calculator__row mortgage-row">
-                            <label class="mortgage-row__label"
-                                >Rate of Interest</label
-                            >
-                            <div class="mortgage-row__wrapper-input">
-                                <span class="rangeMortgage__leftBullet"
-                                    >0.1</span
-                                >
-                                <input
-                                    class="rangeMortgage1"
-                                    type="range"
-                                    style="--min: 0;
-                                --max: 100;
-                                --val: 80;"
-                                    value="80"
-                                />
-                                <span class="rangeMortgage__rightBullet"
-                                    >10</span
-                                >
-                                <input
-                                    type="text"
-                                    class="mortgage-row__value rangeMortgage1__value"
-                                    readonly
-                                    value="0.8"
-                                />
+                            <div class="calculator__row interest-row">
+                                <label class="calculator__label">Rate of interest (%)</label>
+                                <div class="interest-row__wrapper-input">
+                                    <span class="interest-row__leftBullet">0.1</span>
+                                    <input class="rangeInterest" type="range" style="--min: 1;--max: 100;--val: 80;" value="80" />
+                                    <span class="interest-row__rightBullet">10</span>
+                                    <input type="text" class="interest-row__value rangeInterest__value" readonly  value="8.0" />
+                                </div>
                             </div>
-                        </div> -->
+
+                            <div class="calculator__row loan-row">
+                                <label class="calculator__label">Loan Amount</label>
+                                <div class="loan-row__wrapper-input">
+                                    <input type="text" class="loan-row__value" />
+                                    <span class="mask-cash">$</span>
+                                </div>
+                            </div>
+
+                            <div class="calculator__row annual-row">
+                                <div class="annual-row__col1">
+                                    <label class="calculator__label">Annual Tax</label>
+                                    <div class="annual-row__wrapper-input">
+                                        <input type="text" class="annual-row__value" value="1000" />
+                                        <span class="mask-cash">$</span>
+                                    </div>
+                                </div>
+                                <div class="annual-row__col2">
+                                    <label class="calculator__label">Annual Insurance</label>
+                                    <div class="annual-row__wrapper-input">
+                                        <input type="text" class="annual-row__value" value="300" />
+                                        <span class="mask-cash">$</span>
+                                    </div>
+                                </div>
+                            </div>
+
                     </div>
                 </main>
             </div>

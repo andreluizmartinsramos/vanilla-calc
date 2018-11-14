@@ -4,6 +4,6 @@ import RangeDecorator from './Range.js';
 const rangeMortgage = new RangeDecorator('[class="rangeMortgage"]', '.rangeMortgage__value', 40, true);
 rangeMortgage.init();
 
-// // Decorating Range 02
-// const rangeMortgage1 = new RangeDecorator('[class="rangeMortgage1"]', '.rangeMortgage1__value', 10);
-// rangeMortgage1.init();
+// Decorating Range 02
+const rangeInterest = new RangeDecorator('[class="rangeInterest"]', '.rangeInterest__value', 10);
+rangeInterest.init();
