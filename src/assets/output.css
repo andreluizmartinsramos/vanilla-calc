@@ -31,7 +31,7 @@
  * Global Settings
  */
 * {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-stretch: normal;
   color: #3e3d3f;
   outline: 0;
@@ -40,7 +40,7 @@
 }
 
 /**
- * Specific Style
+ * Layout Style
  */
 .wrapper-page__wrapper-util {
   width: 900px;

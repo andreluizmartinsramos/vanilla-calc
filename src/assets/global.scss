@@ -2,9 +2,9 @@
  * Variables
  */
 
-$defaultColor: #3e3d3f;
-$higlightColor: #005175;
-$m_highlightColor: #006ea0;
+$default-color: #3e3d3f;
+$higlight-color: #005175;
+$m_highlight-color: #006ea0;
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
@@ -38,16 +38,16 @@ $m_highlightColor: #006ea0;
  */
 
 * {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-stretch: normal;
-    color: $defaultColor;
+    color: $default-color;
     outline: 0;
     box-sizing: border-box;
     letter-spacing: 0.3px;
 }
 
 /**
- * Specific Style
+ * Layout Style
  */
 
 .wrapper-page {
@@ -62,7 +62,7 @@ $m_highlightColor: #006ea0;
         @extend .title-line;
         letter-spacing: 0.5px;
         font-size: 20px;
-        color: $higlightColor;
+        color: $higlight-color;
         font-weight: 1;
     }
 
