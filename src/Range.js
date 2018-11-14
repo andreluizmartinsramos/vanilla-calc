@@ -34,23 +34,17 @@ class Range {
    * @description Method to paint regarding CSS and control the value
    * */
   init() {
-    this.inputRange.addEventListener(
-      'input',
-      (e) => {
-        // Control the current value for CSS layer apply the mask
-        this.inputRange.style.setProperty('--val', +this.inputRange.value);
+    this.inputRange.addEventListener('input', (e) => {
+      // Control the current value for CSS layer apply the mask
+      this.inputRange.style.setProperty('--val', +this.inputRange.value);
 
-        // Insert the current value into the input target regarding the round rule.
-        if (this.round) {
-          document.querySelector(this.inputBox).value = Math.round(
-            (this.inputRange.value * this.maxNumber) / 100,
-          );
-        } else {
-          document.querySelector(this.inputBox).value = (this.inputRange.value * this.maxNumber) / 100;
-        }
-      },
-      false,
-    );
+      // Insert the current value into the input target regarding the round rule.
+      if (this.round) {
+        document.querySelector(this.inputBox).value = Math.round((this.inputRange.value * this.maxNumber) / 100);
+      } else {
+        document.querySelector(this.inputBox).value = (this.inputRange.value * this.maxNumber) / 100;
+      }
+    }, false);
   }
 }
 
