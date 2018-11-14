@@ -139,6 +139,7 @@ $filll-c: #1091cc;
     border: none;
     height: $track-h;
     background: $track-c;
+    border-radius: 20px;
 
     @if $fill == 1 {
         .js & {
@@ -155,6 +156,7 @@ $filll-c: #1091cc;
 @mixin fill() {
     height: $track-h;
     background: $filll-c;
+    border-radius: 20px;
 }
 
 @mixin thumb() {
@@ -188,7 +190,6 @@ $filll-c: #1091cc;
         @include track;
     }
     &::-ms-track {
-        border-radius: 20px;
         @include track;
     }
 
