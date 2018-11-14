@@ -1,12 +1,7 @@
 /**
  * Variables
  */
-@font-face {
-  font-family: "HelveticaNeue";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Helvetica Neue Medium"), url("./fonts/HelveticaNeue-Thin.woff") format("woff");
-}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 .title-line, .calculator__title, .wrapper-page__title {
   padding: 0 0 15px 0;
   border-bottom: 1px solid #cacaca;
@@ -24,20 +19,19 @@
   display: flex;
   width: 100%;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .flex-center, .mortgage-row__wrapper-input, .wrapper-page {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 /**
  * Global Settings
  */
 * {
-  font-family: HelveticaNeue;
+  font-family: "Open Sans";
   font-stretch: normal;
   color: #3e3d3f;
   outline: 0;
@@ -53,10 +47,10 @@
   padding: 10px 30px;
 }
 .wrapper-page__title {
-  font-weight: 0;
   letter-spacing: 0.5px;
   font-size: 20px;
   color: #005175;
+  font-weight: 1;
 }
 .wrapper-page__main {
   margin: 25px 40px;
@@ -70,7 +64,8 @@
   box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
 }
 .calculator__title {
-  border-color: #cbcbcb;
+  border-color: #cfcfcf;
+  font-weight: 1;
 }
 .calculator__row {
   display: flex;
@@ -83,15 +78,97 @@
 }
 
 .mortgage-row__value {
-  width: 60px;
+  width: 70px;
   margin-left: 15px;
 }
-.mortgage-row__range {
+.mortgage-row .rangeMortgage1,
+.mortgage-row .rangeMortgage {
   flex: 1;
-  margin: 0 15px;
+}
+.mortgage-row .rangeMortgage1__leftBullet,
+.mortgage-row .rangeMortgage__leftBullet {
+  text-align: left;
+}
+.mortgage-row .rangeMortgage1__rightBullet,
+.mortgage-row .rangeMortgage__rightBullet {
+  text-align: right;
 }
 .mortgage-row span {
   opacity: 0.8;
+  width: 40px;
+  text-align: left;
+}
+
+/**
+*   Range Decorator
+*/
+[type=range] {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--val) - var(--min)) / var(--range));
+  --sx: calc(0.5 *1.8em + var(--ratio) * (100% - 1.8em));
+  margin: 0;
+  padding: 0;
+  width: 12.5em;
+  height: 1.8em;
+}
+[type=range], [type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+[type=range]::-webkit-slider-runnable-track {
+  border-radius: 20px;
+  border: none;
+  height: 0.6em;
+  background: #d8d8d8;
+}
+.js [type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(#1091cc, #1091cc) 0/var(--sx) 100% no-repeat #d8d8d8;
+}
+[type=range]::-moz-range-track {
+  border: none;
+  height: 0.6em;
+  background: #d8d8d8;
+}
+[type=range]::-ms-track {
+  border-radius: 20px;
+  border: none;
+  height: 0.6em;
+  background: #d8d8d8;
+}
+[type=range]::-moz-range-progress {
+  height: 0.6em;
+  background: #1091cc;
+}
+[type=range]::-ms-fill-lower {
+  height: 0.6em;
+  background: #1091cc;
+}
+[type=range]::-webkit-slider-thumb {
+  border: none;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50%;
+  background: #fff !important;
+  box-shadow: 0 1px 2px 0 #ccc;
+}
+[type=range]::-moz-range-thumb {
+  border: none;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50%;
+  background: #fff !important;
+  box-shadow: 0 1px 2px 0 #ccc;
+}
+[type=range]::-ms-thumb {
+  margin-top: 0;
+  border: none;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50%;
+  background: #fff !important;
+  box-shadow: 0 1px 2px 0 #ccc;
+}
+[type=range]::-ms-tooltip {
+  display: none;
 }
 
 /*# sourceMappingURL=output.css.map */

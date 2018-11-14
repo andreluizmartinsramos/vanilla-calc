@@ -6,13 +6,7 @@ $defaultColor: #3e3d3f;
 $higlightColor: #005175;
 $m_highlightColor: #006ea0;
 
-@font-face {
-    font-family: "HelveticaNeue";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Helvetica Neue Medium"),
-        url("./fonts/HelveticaNeue-Thin.woff") format("woff");
-}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
 .title-line {
     padding: 0 0 15px 0;
@@ -31,13 +25,12 @@ $m_highlightColor: #006ea0;
     display: flex;
     width: 100%;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .flex-center {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 /**
@@ -45,7 +38,7 @@ $m_highlightColor: #006ea0;
  */
 
 * {
-    font-family: HelveticaNeue;
+    font-family: "Open Sans";
     font-stretch: normal;
     color: $defaultColor;
     outline: 0;
@@ -67,10 +60,10 @@ $m_highlightColor: #006ea0;
 
     &__title {
         @extend .title-line;
-        font-weight: 0;
         letter-spacing: 0.5px;
         font-size: 20px;
         color: $higlightColor;
+        font-weight: 1;
     }
 
     &__main {
@@ -87,7 +80,8 @@ $m_highlightColor: #006ea0;
 
     &__title {
         @extend .title-line;
-        border-color: #cbcbcb;
+        border-color: #cfcfcf;
+        font-weight: 1;
     }
 
     &__row {
@@ -107,17 +101,116 @@ $m_highlightColor: #006ea0;
     }
     &__value {
         @extend .input-text-default;
-        width: 60px;
+        width: 70px;
         margin-left: 15px;
     }
-    &__range {
+    .rangeMortgage1,
+    .rangeMortgage {
         flex: 1;
-        margin: 0 15px;
+        //margin: 0 20px !important;
+        &__leftBullet {
+            text-align: left;
+        }
+
+        &__rightBullet {
+            text-align: right;
+        }
     }
     &__label {
         @extend .label-default;
     }
     span {
         opacity: 0.8;
+        width: 40px;
+        text-align: left;
+    }
+}
+
+/**
+*   Range Decorator
+*/
+$track-w: 12.5em;
+$track-h: 0.6em;
+$thumb-d: 1.8em;
+$track-c: #d8d8d8;
+$filll-c: #1091cc;
+
+@mixin track($fill: 0) {
+    border: none;
+    height: $track-h;
+    background: $track-c;
+
+    @if $fill == 1 {
+        .js & {
+            background: linear-gradient($filll-c, $filll-c)
+                0 /
+                var(--sx)
+                100%
+                no-repeat
+                $track-c;
+        }
+    }
+}
+
+@mixin fill() {
+    height: $track-h;
+    background: $filll-c;
+}
+
+@mixin thumb() {
+    border: none;
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50%;
+    background: #fff !important;
+    box-shadow: 0 1px 2px 0 #ccc;
+}
+
+[type="range"] {
+    &,
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+    }
+
+    --range: calc(var(--max) - var(--min));
+    --ratio: calc((var(--val) - var(--min)) / var(--range));
+    --sx: calc(0.5 *#{$thumb-d} + var(--ratio) * (100% - #{$thumb-d}));
+    margin: 0;
+    padding: 0;
+    width: $track-w;
+    height: $thumb-d;
+
+    &::-webkit-slider-runnable-track {
+        border-radius: 20px;
+        @include track(1);
+    }
+    &::-moz-range-track {
+        @include track;
+    }
+    &::-ms-track {
+        border-radius: 20px;
+        @include track;
+    }
+
+    &::-moz-range-progress {
+        @include fill;
+    }
+    &::-ms-fill-lower {
+        @include fill;
+    }
+
+    &::-webkit-slider-thumb {
+        @include thumb;
+    }
+    &::-moz-range-thumb {
+        @include thumb;
+    }
+    &::-ms-thumb {
+        margin-top: 0;
+        @include thumb;
+    }
+
+    &::-ms-tooltip {
+        display: none;
     }
 }

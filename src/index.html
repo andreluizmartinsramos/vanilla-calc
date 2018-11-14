@@ -7,6 +7,7 @@
         <title>Awesome Calc</title>
         <link rel="stylesheet" href="./assets/output.css" />
         <link rel="stylesheet" href="./assets/reset.css" />
+        <link rel="stylesheet" href="./assets/range-style.css" />
     </head>
     <body>
         <div class="wrapper-page">
@@ -28,33 +29,49 @@
                                 >Years of Mortgage</label
                             >
                             <div class="mortgage-row__wrapper-input">
-                                <span>1</span>
+                                <span class="rangeMortgage__leftBullet">1</span>
                                 <input
+                                    class="rangeMortgage"
                                     type="range"
-                                    class="mortgage-row__range"
+                                    style="--min: 1;
+                                --max: 100;
+                                --val: 50;"
                                 />
-                                <span>40</span>
+                                <span class="rangeMortgage__rightBullet"
+                                    >40</span
+                                >
                                 <input
                                     type="text"
-                                    class="mortgage-row__value"
+                                    class="mortgage-row__value rangeMortgage__value"
+                                    readonly
+                                    value="20"
                                 />
                             </div>
                         </div>
 
                         <div class="calculator__row mortgage-row">
                             <label class="mortgage-row__label"
-                                >Years of Mortgage</label
+                                >Rate of Interest</label
                             >
                             <div class="mortgage-row__wrapper-input">
-                                <span>1</span>
+                                <span class="rangeMortgage__leftBullet"
+                                    >0.1</span
+                                >
                                 <input
+                                    class="rangeMortgage1"
                                     type="range"
-                                    class="mortgage-row__range"
+                                    style="--min: 0;
+                                --max: 100;
+                                --val: 50;"
                                 />
-                                <span>40</span>
+                                <span class="rangeMortgage__rightBullet"
+                                    >10</span
+                                >
                                 <input
                                     type="text"
-                                    class="mortgage-row__value"
+                                    class="mortgage-row__value rangeMortgage1__value"
+                                    readonly
+                                    value="20"
                                 />
                             </div>
                         </div>
@@ -63,5 +80,5 @@
             </div>
         </div>
     </body>
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
 </html>
