@@ -1,14 +1,28 @@
 /**
  * A module that manage type="range" of DOM
  * @module awesome/range
+ * @description Class to manage all range components
  */
 class Range {
-  constructor(obj = '[type=range]', inputBox = '.result', maxNumber = 40, round = false) {
+  /**
+   * Method to construct the Range
+   * @function constructor
+   * @description Set private variables and start issues of Range
+   * @param {objDOM} String Object target to decorate. Default is [type=range]
+   * @param {inputBox} String Object target to inform the current number. Default is .result
+   * @param {maxNumber} Intenger Limit of max number of bound. Default is 100
+   * @param {round} Boolean Define if current value will be delivery rounded or decimals. Default is false.
+   * */
+
+  constructor(obj = '[type=range]', inputBox = '.result', maxNumber = 100, round = false) {
     // Get the DOM properties
     this.inputRange = document.querySelector(obj);
     this.maxNumber = maxNumber;
     this.inputBox = inputBox;
     this.round = round;
+
+    // Fill the track according initial state
+    this.inputRange.style.setProperty('--val', +this.inputRange.style.getPropertyValue('--val'));
 
     // Apply mask .js
     document.documentElement.classList.add('js');
@@ -16,9 +30,8 @@ class Range {
 
   /**
    * Method that starts the Range
+   * @function init
    * @description Method to paint regarding CSS and control the value
-   * @param {null} ' There is no param
-   * @return {avoid} There is no return
    * */
   init() {
     this.inputRange.addEventListener(
