@@ -60,10 +60,11 @@ $m_highlight-color: #006ea0;
 .wrapper-page {
     @include flex-center;
     justify-content: center;
+    margin-top: 23px;
 
     &__wrapper-util {
         width: 900px;
-        padding: 10px 30px;
+        padding: 23px 30px;
         min-width: 320px;
     }
 
