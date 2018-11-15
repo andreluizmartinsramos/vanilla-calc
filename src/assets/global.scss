@@ -4,6 +4,7 @@
 
 $default-color: #3e3d3f;
 $higlight-color: #005175;
+$highlight-color2: #006ea0;
 $m_highlight-color: #006ea0;
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
@@ -73,15 +74,66 @@ $m_highlight-color: #006ea0;
 
     &__main {
         margin: 25px 40px;
+        display: flex;
+        align-items: center;
+        z-index: 0;
+    }
+}
+
+.result {
+    width: 298px;
+    height: 440px;
+    background-color: #eaf6fa;
+    padding: 35px 45px;
+
+    &__title {
+        font-size: 22px;
+        font-weight: 1;
+        margin-bottom: 29px;
+        line-height: 1.36;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    &__topic {
+        font-size: 14px;
+        line-height: 2.14;
+        letter-spacing: normal;
+    }
+
+    &__value {
+        opacity: 0.2;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.67;
+    }
+    .final-value {
+        border-top: 1px solid #cbcbcb;
+        padding: 15px 0;
+
+        .result__topic {
+            line-height: 1.67;
+            font-size: 18px;
+            letter-spacing: normal
+        }
+        .result__value {
+            line-height: 1.36;
+            font-size: 24px;
+            letter-spacing: normal;
+        }
     }
 }
 
 .calculator {
     width: 470px;
-    height: 522px;
     padding: 34px 40px 40px 40px;
     border-radius: 4px;
     box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 
     &__title {
         @include title-line;
@@ -101,6 +153,17 @@ $m_highlight-color: #006ea0;
     }
     &__label {
         @include label-default;
+    }
+    &__button {
+        height: 45px;
+        background-color: $highlight-color2;
+        color: #fff;
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
     }
 }
 

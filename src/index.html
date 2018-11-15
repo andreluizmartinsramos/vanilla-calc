@@ -19,6 +19,8 @@
 
                 <!-- MAIN -->
                 <main class="wrapper-page__main">
+
+                    <!-- CALCULATOR AREA -->
                     <div class="calculator">
                         <h2 class="calculator__title">Change values to calculate your results</h2>
 
@@ -30,44 +32,74 @@
                                 <span class="mortgage-row__rightBullet">40</span>
                                 <input type="text" class="mortgage-row__value rangeMortgage__value" readonly  value="30" />
                             </div>
+                        </div>
 
-                            <div class="calculator__row interest-row">
-                                <label class="calculator__label">Rate of interest (%)</label>
-                                <div class="interest-row__wrapper-input">
-                                    <span class="interest-row__leftBullet">0.1</span>
-                                    <input class="rangeInterest" type="range" style="--min: 1;--max: 100;--val: 80;" value="80" />
-                                    <span class="interest-row__rightBullet">10</span>
-                                    <input type="text" class="interest-row__value rangeInterest__value" readonly  value="8.0" />
-                                </div>
+                        <div class="calculator__row interest-row">
+                            <label class="calculator__label">Rate of interest (%)</label>
+                            <div class="interest-row__wrapper-input">
+                                <span class="interest-row__leftBullet">0.1</span>
+                                <input class="rangeInterest" type="range" style="--min: 1;--max: 100;--val: 80;" value="80" />
+                                <span class="interest-row__rightBullet">10</span>
+                                <input type="text" class="interest-row__value rangeInterest__value" readonly  value="8.0" />
                             </div>
+                        </div>
 
-                            <div class="calculator__row loan-row">
-                                <label class="calculator__label">Loan Amount</label>
-                                <div class="loan-row__wrapper-input">
-                                    <input type="text" class="loan-row__value" />
+                        <div class="calculator__row loan-row">
+                            <label class="calculator__label">Loan Amount</label>
+                            <div class="loan-row__wrapper-input">
+                                <input type="text" class="loan-row__value" />
+                                <span class="mask-cash">$</span>
+                            </div>
+                        </div>
+
+                        <div class="calculator__row annual-row">
+                            <div class="annual-row__col1">
+                                <label class="calculator__label">Annual Tax</label>
+                                <div class="annual-row__wrapper-input">
+                                    <input type="text" class="annual-row__value" value="1000" />
                                     <span class="mask-cash">$</span>
                                 </div>
                             </div>
-
-                            <div class="calculator__row annual-row">
-                                <div class="annual-row__col1">
-                                    <label class="calculator__label">Annual Tax</label>
-                                    <div class="annual-row__wrapper-input">
-                                        <input type="text" class="annual-row__value" value="1000" />
-                                        <span class="mask-cash">$</span>
-                                    </div>
-                                </div>
-                                <div class="annual-row__col2">
-                                    <label class="calculator__label">Annual Insurance</label>
-                                    <div class="annual-row__wrapper-input">
-                                        <input type="text" class="annual-row__value" value="300" />
-                                        <span class="mask-cash">$</span>
-                                    </div>
+                            <div class="annual-row__col2">
+                                <label class="calculator__label">Annual Insurance</label>
+                                <div class="annual-row__wrapper-input">
+                                    <input type="text" class="annual-row__value" value="300" />
+                                    <span class="mask-cash">$</span>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="calculator__row">
+                            <button class="calculator__button">CALCULATE</button>
+                        </div>
+                    </div>
+
+                    <!-- RESULT AREA -->
+                    <div class="result">
+                        <h2 class="result__title">Your Results</h2>
+
+                        <div class="result__row">
+                            <span class="result__topic">Principle & Interest</span>
+                            <span class="result__value principle-interest">$ - -</span>
+                        </div>
+
+                        <div class="result__row">
+                            <span class="result__topic">Tax</span>
+                            <span class="result__value tax">$ - -</span>
+                        </div>
+
+                        <div class="result__row">
+                            <span class="result__topic">Insurance</span>
+                            <span class="result__value insurance">$ - -</span>
+                        </div>
+
+                        <div class="result__row final-value">
+                            <span class="result__topic">Total Monthly Payment</span>
+                            <span class="result__value total">$ - -</span>
+                        </div>
                     </div>
                 </main>
+
             </div>
         </div>
     </body>
