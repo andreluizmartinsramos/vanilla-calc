@@ -1,0 +1,59 @@
+/**
+ * Breakpoint max-width: 900px (the width of the screen providec)
+ */
+/**
+ * Layout Style
+ */
+.wrapper-page__wrapper-util {
+  padding: 10px;
+}
+.wrapper-page__main {
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+
+.calculator {
+  width: 100%;
+  padding: 15px 20px 20px 20px;
+}
+.calculator__title {
+  font-size: 12px;
+  padding: 6px 0 6px 0;
+  margin-bottom: 15px;
+}
+.calculator__label {
+  font-size: 12px;
+}
+.calculator__row {
+  font-size: 12px;
+}
+.calculator__row span {
+  opacity: 1;
+  width: 25px;
+}
+.calculator__button {
+  font-size: 14px;
+  height: 40px;
+}
+
+.interest-row__value,
+.mortgage-row__value {
+  width: 50px;
+  margin-left: 10px;
+  font-size: 14px;
+  padding: 5px;
+  text-align: center;
+  height: 40px;
+}
+
+.annual-row__value,
+.loan-row__value {
+  font-size: 14px;
+  height: 40px;
+}
+
+.result {
+  width: 100%;
+}
+
+/*# sourceMappingURL=mobile.css.map */

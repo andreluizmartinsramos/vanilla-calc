@@ -1,3 +1,4 @@
+
 /**
  * Variables & Mixins
  */
@@ -58,10 +59,12 @@ $m_highlight-color: #006ea0;
 
 .wrapper-page {
     @include flex-center;
+    justify-content: center;
 
     &__wrapper-util {
         width: 900px;
         padding: 10px 30px;
+        min-width: 320px;
     }
 
     &__title {
@@ -140,6 +143,7 @@ $m_highlight-color: #006ea0;
         border-color: #cfcfcf;
         font-weight: 1;
         margin-bottom: 35px;
+        letter-spacing: 0.2
     }
 
     &__row {
@@ -175,6 +179,7 @@ $m_highlight-color: #006ea0;
     }
     &__wrapper-input {
         @include flex-center;
+        align-items: center;
     }
     &__value {
         @include input-text-default;
@@ -203,6 +208,7 @@ $m_highlight-color: #006ea0;
             top: 20px;
             left: 20px;
             font-weight: bold;
+            font-size: 16px;
         }
     }
     &__value {
@@ -238,30 +244,27 @@ $thumb-d: 1.8em;
 $track-c: #d8d8d8;
 $filll-c: #1091cc;
 
+//Styling the track whereas will be aplied in all -nav-
 @mixin track($fill: 0) {
     border: none;
     height: $track-h;
     background: $track-c;
     border-radius: 20px;
-
     @if $fill == 1 {
         .js & {
-            background: linear-gradient($filll-c, $filll-c)
-                0 /
-                var(--sx)
-                100%
-                no-repeat
-                $track-c;
+            background: linear-gradient($filll-c, $filll-c) 0 / var(--sx) 100% no-repeat $track-c;
         }
     }
 }
 
+//Styling the track filled whereas will be aplied in all -nav-
 @mixin fill() {
     height: $track-h;
     background: $filll-c;
     border-radius: 20px;
 }
 
+//Styling bullet of track whereas will be aplied in all -nav-
 @mixin thumb() {
     border: none;
     width: 24px !important;
@@ -269,14 +272,10 @@ $filll-c: #1091cc;
     border-radius: 50%;
     background: #fff !important;
     box-shadow: 0 1px 2px 0 #ccc;
+    cursor: pointer;
 }
 
 [type="range"] {
-    &,
-    &::-webkit-slider-thumb {
-        -webkit-appearance: none;
-    }
-
     --range: calc(var(--max) - var(--min));
     --ratio: calc((var(--val) - var(--min)) / var(--range));
     --sx: calc(0.5 *#{$thumb-d} + var(--ratio) * (100% - #{$thumb-d}));
@@ -285,6 +284,13 @@ $filll-c: #1091cc;
     width: $track-w;
     height: $thumb-d;
 
+    &,
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+    }
+    &::-webkit-slider-thumb {
+        margin-top: -10px;
+    }
     &::-webkit-slider-runnable-track {
         border-radius: 20px;
         @include track(1);
@@ -295,14 +301,12 @@ $filll-c: #1091cc;
     &::-ms-track {
         @include track;
     }
-
     &::-moz-range-progress {
         @include fill;
     }
     &::-ms-fill-lower {
         @include fill;
     }
-
     &::-webkit-slider-thumb {
         @include thumb;
     }
@@ -313,7 +317,6 @@ $filll-c: #1091cc;
         margin-top: 0;
         @include thumb;
     }
-
     &::-ms-tooltip {
         display: none;
     }

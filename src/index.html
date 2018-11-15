@@ -7,7 +7,7 @@
         <title>Awesome Calc</title>
         <link rel="stylesheet" href="./assets/output.css" />
         <link rel="stylesheet" href="./assets/reset.css" />
-        <link rel="stylesheet" href="./assets/range-style.css" />
+        <link rel="stylesheet" media="(max-width: 900px)" href="./assets/mobile.css" />
     </head>
     <body>
         <div class="wrapper-page">
@@ -47,7 +47,7 @@
                         <div class="calculator__row loan-row">
                             <label class="calculator__label">Loan Amount</label>
                             <div class="loan-row__wrapper-input">
-                                <input type="text" class="loan-row__value" />
+                                <input type="number" class="loan-row__value" />
                                 <span class="mask-cash">$</span>
                             </div>
                         </div>
@@ -56,14 +56,14 @@
                             <div class="annual-row__col1">
                                 <label class="calculator__label">Annual Tax</label>
                                 <div class="annual-row__wrapper-input">
-                                    <input type="text" class="annual-row__value" value="1000" />
+                                    <input type="number" class="annual-row__value" value="1000" />
                                     <span class="mask-cash">$</span>
                                 </div>
                             </div>
                             <div class="annual-row__col2">
                                 <label class="calculator__label">Annual Insurance</label>
                                 <div class="annual-row__wrapper-input">
-                                    <input type="text" class="annual-row__value" value="300" />
+                                    <input type="number" class="annual-row__value" value="300" />
                                     <span class="mask-cash">$</span>
                                 </div>
                             </div>
