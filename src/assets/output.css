@@ -240,14 +240,14 @@
 
 .hamburguer-menu {
   background: #08517c;
-  opacity: 0.95;
+  opacity: 0.9;
   position: fixed;
   top: 0;
   right: -210px;
   height: 100%;
   z-index: 2;
   padding: 15px;
-  transition: right 0.8s linear;
+  transition: right 0.3s linear;
 }
 .hamburguer-menu--is-open {
   right: 0;

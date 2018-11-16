@@ -66,6 +66,8 @@ class Calculator {
     // Render process
     this.render(resultData);
 
+    console.log(resultData);
+
     // DOM procedures to show data
     document.querySelector('.calculator__button').innerHTML = 'RECALCULATE';
     document.querySelector('.result').classList.remove('result--is-clean');
@@ -113,33 +115,37 @@ class Calculator {
    * */
 
   makeCalc(data) {
-    // Destruction ES6
-    const {
-      interestRate, loanAmount, yearsOfMortgage, annualTax, annualInsurance,
-    } = data;
+    try {
+      // Destruction ES6
+      const {
+        interestRate, loanAmount, yearsOfMortgage, annualTax, annualInsurance,
+      } = data;
 
-    // Object to be rendered
-    const resultData = {
-      // Calc and keep the Principle Interest
-      principleInterest: Number.parseFloat(
-        this.calcPrincipleInterest(interestRate, loanAmount, yearsOfMortgage).toFixed(2),
-      ),
+      // Object to be rendered
+      const resultData = {
+        // Calc and keep the Principle Interest
+        principleInterest: Number.parseFloat(
+          this.calcPrincipleInterest(interestRate, loanAmount, yearsOfMortgage).toFixed(2),
+        ),
 
-      // Calc and keep the Tax
-      tax: Number.parseFloat(this.calcTax(annualTax).toFixed(2)),
+        // Calc and keep the Tax
+        tax: Number.parseFloat(this.calcTax(annualTax).toFixed(2)),
 
-      // Calc the Insurance
-      insurance: Number.parseFloat(this.calcInsurance(annualInsurance).toFixed(2)),
-    };
+        // Calc the Insurance
+        insurance: Number.parseFloat(this.calcInsurance(annualInsurance).toFixed(2)),
+      };
 
-    // Processing the payment
-    resultData.totalMonthlyPayment = (
-      resultData.principleInterest
-      + resultData.tax
-      + resultData.insurance
-    ).toFixed(2);
+      // Processing the payment
+      resultData.totalMonthlyPayment = (
+        resultData.principleInterest
+        + resultData.tax
+        + resultData.insurance
+      ).toFixed(2);
 
-    return resultData;
+      return resultData;
+    } catch (e) {
+      throw new Error(e);
+    }
   }
 
   /**
@@ -153,9 +159,11 @@ class Calculator {
    * */
 
   calcPrincipleInterest(interestRate, loanAmount, yearsOfMortgage) {
-    return (
-      ((interestRate / 100 / 12) * loanAmount)
-      / (1 - Math.pow(1 + interestRate / 100 / 12, -yearsOfMortgage * 12))
+    return Number(
+      (
+        ((interestRate / 100 / 12) * loanAmount)
+        / (1 - Math.pow(1 + interestRate / 100 / 12, -yearsOfMortgage * 12))
+      ).toFixed(2),
     );
   }
 
@@ -168,7 +176,7 @@ class Calculator {
    * */
 
   calcTax(annualTax) {
-    return Number(annualTax / 12);
+    return Number((annualTax / 12).toFixed(2));
   }
 
   /**
@@ -180,7 +188,7 @@ class Calculator {
    * */
 
   calcInsurance(annualInsurance) {
-    return annualInsurance / 12;
+    return Number((annualInsurance / 12).toFixed(2));
   }
 
   /**

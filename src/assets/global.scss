@@ -5,7 +5,6 @@
 $default-color: #3e3d3f;
 $higlight-color: #005175;
 $highlight-color2: #006ea0;
-$m_highlight-color: #006ea0;
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
@@ -178,7 +177,7 @@ $m_highlight-color: #006ea0;
     }
     &__button {
         height: 45px;
-        background-color: $highlight-color2;
+        background-color: #006ea0;
         color: #fff;
         border: 0;
         border-radius: 4px;
@@ -265,14 +264,14 @@ $m_highlight-color: #006ea0;
 
 .hamburguer-menu {
     background: #08517c;
-    opacity: 0.95;
+    opacity: 0.9;
     position: fixed;
     top: 0;
     right: -210px;
     height: 100%;
     z-index: 2;
     padding: 15px;
-    transition: right 0.8s linear;
+    transition: right 0.3s linear;
 
     &--is-open {
         right: 0;
