@@ -2,12 +2,10 @@
  * Breakpoint max-width: 900px (the width of the screen providec)
  */
 
-
 /**
  * Layout Style
  */
- .wrapper-page {
-
+.wrapper-page {
     &__wrapper-util {
         padding: 10px;
     }
@@ -15,12 +13,15 @@
         margin: 20px 0px;
         flex-wrap: wrap;
     }
- }
-
+}
 
 .calculator {
     width: 100%;
     padding: 15px 20px 20px 20px;
+
+    &--is-clean {
+        display: none;
+    }
 
     &__title {
         font-size: 12px;
@@ -99,14 +100,15 @@
 
         .result__topic {
             font-size: 12px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+                sans-serif;
         }
         .result__value {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+                sans-serif;
             font-size: 18px;
             color: #3e3d3f;
             opacity: 1;
         }
     }
-
 }

@@ -16,6 +16,9 @@
   width: 100%;
   padding: 15px 20px 20px 20px;
 }
+.calculator--is-clean {
+  display: none;
+}
 .calculator__title {
   font-size: 12px;
   padding: 6px 0 6px 0;

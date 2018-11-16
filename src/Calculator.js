@@ -48,7 +48,7 @@ class Calculator {
     const resultData = this.getDataFromDOM().makeCalc(this.data);
     this.render(resultData);
 
-    document.querySelector('.result').classList.remove('isClean');
+    document.querySelector('.result').classList.remove('calculator--is-clean');
   }
 
   cleanUp() {
@@ -66,7 +66,7 @@ class Calculator {
       totalMonthlyPayment: '- -',
     };
 
-    document.querySelector('.result').classList.add('isClean');
+    document.querySelector('.result').classList.add('calculator--is-clean');
     this.render(resultData);
   }
 
