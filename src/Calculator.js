@@ -45,13 +45,19 @@ class Calculator {
   }
 
   handleCalc() {
+
+    //Prepare Object to execute new calc
     this.cleanUp();
 
+    //Counts the values according the formula
     const resultData = this.getDataFromDOM().makeCalc(this.data);
+
+    //Render process
     this.render(resultData);
 
+    //DOM procedures to show data
+    document.querySelector('.calculator__button').innerHTML = "RECALCULATE"
     document.querySelector('.result').classList.remove('result--is-clean');
-
     scrollIt(300, 500, function() { document.querySelector('.result').classList.add('result--is-open') }() );
   }
 

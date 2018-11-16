@@ -21,12 +21,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 23px;
+  margin-top: 45px;
 }
 .wrapper-page__wrapper-util {
+  position: relative;
   width: 900px;
   padding: 23px 30px;
   min-width: 320px;
+}
+.wrapper-page__nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 50px;
+  top: 0;
+  padding: 10px;
+}
+.wrapper-page__hamburguer-button {
+  cursor: pointer;
 }
 .wrapper-page__title {
   padding: 0 0 15px 0;
@@ -127,6 +141,17 @@
   font-weight: bold;
   letter-spacing: 1px;
 }
+.calculator__button:active {
+  animation: animation 0.5s;
+}
+@keyframes animation {
+  0% {
+    background-color: #006ea0;
+  }
+  100% {
+    background-color: #10689e;
+  }
+}
 
 .interest-row span,
 .mortgage-row span {
@@ -208,6 +233,47 @@
 .annual-row__col2 {
   flex: 1;
   margin-left: 10px;
+}
+
+.hamburguer-menu {
+  background: #08517C;
+  opacity: 0.95;
+  position: fixed;
+  top: 0;
+  right: -210px;
+  height: 100%;
+  z-index: 2;
+  padding: 15px;
+  transition: right 0.8s linear;
+}
+.hamburguer-menu--is-open {
+  right: 0;
+}
+.hamburguer-menu--is-close {
+  right: -300px;
+}
+.hamburguer-menu__close {
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+.hamburguer-menu a {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.3px;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 15px;
+  font-weight: bold;
+  display: block;
+  border-bottom: 1px solid #2e76c6;
+}
+.hamburguer-menu a:active {
+  color: #1091cc;
 }
 
 /**

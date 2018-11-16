@@ -1,8 +1,10 @@
 import RangeDecorator from './Range.js';
 import Calculator from './Calculator.js';
+import Menu from './Menu.js';
 
 
 onload = (() => {
+
   // Decorating Range 01
   const rangeMortgage = new RangeDecorator(
     '[class="rangeMortgage"]',
@@ -21,5 +23,11 @@ onload = (() => {
   );
   rangeInterest.init();
 
-  const c = new Calculator().init();
+  //Starts Calculator
+  const calculator = new Calculator().init();
+
+  //Starts Menu
+  const m = new Menu();
+  m.init();
+
 })();

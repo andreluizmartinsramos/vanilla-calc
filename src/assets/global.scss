@@ -59,12 +59,28 @@ $m_highlight-color: #006ea0;
 .wrapper-page {
     @include flex-center;
     justify-content: center;
-    margin-top: 23px;
+    margin-top: 45px;
 
     &__wrapper-util {
+        position: relative;
         width: 900px;
         padding: 23px 30px;
         min-width: 320px;
+    }
+
+    &__nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        height: 50px;
+        top: 0;
+        padding: 10px;
+    }
+
+    &__hamburguer-button {
+        cursor: pointer;
     }
 
     &__title {
@@ -168,6 +184,14 @@ $m_highlight-color: #006ea0;
         font-size: 16px;
         font-weight: bold;
         letter-spacing: 1px;
+
+        &:active {
+            @keyframes animation {
+                0%     {background-color: $highlight-color2;}
+                100%  {background-color:rgb(16, 104, 158);}
+            }
+            animation: animation .5s;
+        }
     }
 }
 
@@ -232,6 +256,53 @@ $m_highlight-color: #006ea0;
         margin-left: 10px;
     }
 }
+
+.hamburguer-menu {
+    background: #08517C;
+    opacity: 0.95;
+    position: fixed;
+    top: 0;
+    right: -210px;
+    height: 100%;
+    z-index: 2;
+    padding: 15px;
+    transition: right 0.8s linear;
+
+    &--is-open {
+        right: 0;
+    }
+
+    &--is-close {
+        right: -300px;
+    }
+
+    &__close {
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 13px;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 50px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        letter-spacing: 0.3px;
+        font-size: 13px;
+        text-transform: uppercase;
+        padding: 15px;
+        font-weight: bold;
+        display: block;
+        border-bottom: 1px solid #2e76c6;
+
+        &:active {
+            color: #1091cc;
+        }
+    }
+}
+
 
 /**
 *   Range Decorator
