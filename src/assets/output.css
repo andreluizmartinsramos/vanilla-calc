@@ -17,6 +17,22 @@
 /**
  * Layout Style
  */
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 50px;
+  top: 0;
+  padding: 10px;
+  background: #fff;
+  z-index: 2;
+}
+.nav__hamburguer-button {
+  cursor: pointer;
+}
+
 .wrapper-page {
   display: flex;
   align-items: center;
@@ -28,19 +44,6 @@
   width: 900px;
   padding: 23px 30px;
   min-width: 320px;
-}
-.wrapper-page__nav {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  height: 50px;
-  top: 0;
-  padding: 10px;
-}
-.wrapper-page__hamburguer-button {
-  cursor: pointer;
 }
 .wrapper-page__title {
   padding: 0 0 15px 0;
@@ -236,7 +239,7 @@
 }
 
 .hamburguer-menu {
-  background: #08517C;
+  background: #08517c;
   opacity: 0.95;
   position: fixed;
   top: 0;

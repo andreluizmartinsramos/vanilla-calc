@@ -56,6 +56,23 @@ $m_highlight-color: #006ea0;
  * Layout Style
  */
 
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 50px;
+    top: 0;
+    padding: 10px;
+    background: #fff;
+    z-index: 2;
+
+    &__hamburguer-button {
+        cursor: pointer;
+    }
+}
+
 .wrapper-page {
     @include flex-center;
     justify-content: center;
@@ -66,21 +83,6 @@ $m_highlight-color: #006ea0;
         width: 900px;
         padding: 23px 30px;
         min-width: 320px;
-    }
-
-    &__nav {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        height: 50px;
-        top: 0;
-        padding: 10px;
-    }
-
-    &__hamburguer-button {
-        cursor: pointer;
     }
 
     &__title {
@@ -187,10 +189,14 @@ $m_highlight-color: #006ea0;
 
         &:active {
             @keyframes animation {
-                0%     {background-color: $highlight-color2;}
-                100%  {background-color:rgb(16, 104, 158);}
+                0% {
+                    background-color: $highlight-color2;
+                }
+                100% {
+                    background-color: rgb(16, 104, 158);
+                }
             }
-            animation: animation .5s;
+            animation: animation 0.5s;
         }
     }
 }
@@ -258,7 +264,7 @@ $m_highlight-color: #006ea0;
 }
 
 .hamburguer-menu {
-    background: #08517C;
+    background: #08517c;
     opacity: 0.95;
     position: fixed;
     top: 0;
@@ -302,7 +308,6 @@ $m_highlight-color: #006ea0;
         }
     }
 }
-
 
 /**
 *   Range Decorator
