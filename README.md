@@ -1,6 +1,6 @@
 # Awesome Calculator
 
-The project was developed in pure HTML/SCSS and JS as well as matched with: https://zpl.io/a30O96N.
+The project was developed in pure HTML/SCSS and JS as well as matched with: https://zpl.io/a30O96N
 
 ## 1. To run
 

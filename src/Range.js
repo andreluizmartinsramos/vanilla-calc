@@ -9,12 +9,12 @@ class Range {
    * @function constructor
    * @description Set private variables and start issues of Range
    * @param {objDOM} String Object target to decorate. Default is [type=range]
-   * @param {inputBox} String Object target to inform the current number. Default is .result
+   * @param {inputBox} String Object target to inform the current number. Default is .resultRange
    * @param {maxNumber} Intenger Limit of max number of bound. Default is 100
    * @param {round} Boolean Define if current value will be delivery rounded or decimals. Default is false.
    * */
 
-  constructor(obj = '[type=range]', inputBox = '.result', maxNumber = 100, round = false) {
+  constructor(obj = '[type=range]', inputBox = '.resultRange', maxNumber = 100, round = false) {
     // Get the DOM properties
     this.inputRange = document.querySelector(obj);
     this.maxNumber = maxNumber;
