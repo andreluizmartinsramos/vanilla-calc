@@ -90,6 +90,7 @@ You just need watch the SASS preprocessing:
 
 ```
 sass --watch ./src/assets/global.scss ./src/assets/output.css
+sass --watch ./src/assets/mobile.scss ./src/assets/mobile.css
 ```
 
 #### 2.7 Concepts adopted:

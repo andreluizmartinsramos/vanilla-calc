@@ -1,6 +1,6 @@
 /**
  * A module that manage type="range" of DOM
- * @module awesome/range
+ * @module Range
  * @description Class to manage all range components
  */
 class Range {
@@ -13,7 +13,6 @@ class Range {
    * @param {maxNumber} Intenger Limit of max number of bound. Default is 100
    * @param {round} Boolean Define if current value will be delivery rounded or decimals. Default is false.
    * */
-
   constructor(obj = '[type=range]', inputBox = '.resultRange', maxNumber = 100, round = false) {
     // Get the DOM properties
     this.inputRange = document.querySelector(obj);

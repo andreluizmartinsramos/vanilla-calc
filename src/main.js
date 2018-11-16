@@ -1,8 +1,12 @@
-import RangeDecorator from './Range.js';
-import Calculator from './Calculator.js';
-import Menu from './Menu.js';
+import RangeDecorator from './components/Range.js';
+import Calculator from './components/Calculator.js';
+import Menu from './components/Menu.js';
 
-
+  /**
+   * Method that starts application
+   * @function onload
+   * @description This global method is called when all dom is loaded
+   * */
 onload = (() => {
 
   // Decorating Range 01
