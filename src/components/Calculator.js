@@ -7,23 +7,13 @@ import scrollIt from './Scroll.js';
  */
 class Calculator {
   /**
-   * Method constructor of the Range
-   * @function constructor
-   * @description Start the class cleaning all data trhough cleanUp()
-   * @return {Calculator}
-   * */
-  constructor() {
-    this.cleanUp();
-
-    return this;
-  }
-
-  /**
    * Method to initialize the calculator
    * @function init
    * @description Apply all listners in the DOM
    * */
   init() {
+    this.cleanUp();
+
     document.getElementById('btnCalc').addEventListener('click', () => this.handleCalc());
 
     document.querySelector('.rangeMortgage').addEventListener('input', (e) => {

@@ -52,7 +52,7 @@ http://localhost:8080/out
 To generate doc (It doesn't necessary if you don't changed)
 
 ```bash
-$ jsdoc .
+$ jsdoc ./src/components
 ```
 
 ## 2. Instructions To develop

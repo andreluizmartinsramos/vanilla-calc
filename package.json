@@ -10,6 +10,9 @@
     "license": "ISC",
     "homepage": "https://bitbucket.org/andreluizmr/awesome-calc#readme",
     "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-preset-es2015": "^6.24.1",
         "eslint": "^5.9.0",
         "eslint-config-airbnb-base": "^13.1.0",
         "eslint-plugin-import": "^2.14.0",
