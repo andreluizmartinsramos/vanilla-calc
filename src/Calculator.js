@@ -1,3 +1,5 @@
+import scrollIt from './Scroll.js';
+
 /**
  * A module that manage the calculator issues
  * @module awesome/calculator
@@ -48,7 +50,9 @@ class Calculator {
     const resultData = this.getDataFromDOM().makeCalc(this.data);
     this.render(resultData);
 
-    document.querySelector('.result').classList.remove('calculator--is-clean');
+    document.querySelector('.result').classList.remove('result--is-clean');
+
+    scrollIt(300, 500, function() { document.querySelector('.result').classList.add('result--is-open') }() );
   }
 
   cleanUp() {
@@ -66,7 +70,8 @@ class Calculator {
       totalMonthlyPayment: '- -',
     };
 
-    document.querySelector('.result').classList.add('calculator--is-clean');
+    document.querySelector('.result').classList.remove('result--is-open');
+    document.querySelector('.result').classList.add('result--is-clean');
     this.render(resultData);
   }
 
@@ -117,6 +122,7 @@ class Calculator {
     document.querySelector('.insurance').innerHTML = `$ ${insurance}`;
     document.querySelector('.total').innerHTML = `$ ${totalMonthlyPayment}`;
   }
+
 }
 
 export default Calculator;

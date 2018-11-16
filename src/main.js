@@ -1,6 +1,7 @@
 import RangeDecorator from './Range.js';
 import Calculator from './Calculator.js';
 
+
 onload = (() => {
   // Decorating Range 01
   const rangeMortgage = new RangeDecorator(

@@ -6,8 +6,11 @@
  */
 .wrapper-page__wrapper-util {
   padding: 10px;
+  overflow: hidden;
+  height: 800px;
 }
 .wrapper-page__main {
+  position: relative;
   margin: 20px 0px;
   flex-wrap: wrap;
 }
@@ -15,9 +18,7 @@
 .calculator {
   width: 100%;
   padding: 15px 20px 20px 20px;
-}
-.calculator--is-clean {
-  display: none;
+  background: #fff;
 }
 .calculator__title {
   font-size: 12px;
@@ -58,7 +59,15 @@
 .result {
   padding: 20px 20px 10px 20px;
   width: 100%;
-  height: 100%;
+  height: 270px;
+  position: absolute;
+}
+.result--is-clean {
+  top: 0px;
+}
+.result--is-open {
+  transition: top 0.5s;
+  top: 430px;
 }
 .result__title {
   font-size: 20px;
