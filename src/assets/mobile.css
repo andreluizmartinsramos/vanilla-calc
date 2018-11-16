@@ -39,10 +39,10 @@
   font-size: 14px;
   height: 40px;
   background: #0077c0;
-  transition: background 0.2s;
+  transition: background 0.5s;
 }
 .calculator__button:active {
-  background-color: #0E618A;
+  background-color: #0033c0;
 }
 
 .interest-row__value,
