@@ -39,7 +39,7 @@ class Calculator {
    * */
   getDataFromDOM() {
     let msgFull = '';
-    this.elements.map((el) => {
+    this.elements.forEach((el) => {
       const value = document.querySelector(el).value;
 
       if (value == '' || value <= 0) {
@@ -264,17 +264,11 @@ class Calculator {
   cleanErrors() {
     this.errors = [];
 
-    document.querySelector('.annualTax--error').classList.remove('is-invalid');
-    document.querySelector('.annualInsurance--error').classList.remove('is-invalid');
-    document.querySelector('.loan-row__value--error').classList.remove('is-invalid');
-
-    document.querySelector('.annualTax--mobile-error').classList.remove('is-invalid');
-    document.querySelector('.annualInsurance--mobile-error').classList.remove('is-invalid');
-    document.querySelector('.loan-row__value--mobile-error').classList.remove('is-invalid');
-
-    document.querySelector('.annualTax').classList.remove('is-invalid');
-    document.querySelector('.annualInsurance').classList.remove('is-invalid');
-    document.querySelector('.loan-row__value').classList.remove('is-invalid');
+    this.elements.slice(-3).forEach((el) => {
+      document.querySelector(`${el}--error`).classList.remove('is-invalid');
+      document.querySelector(`${el}--mobile-error`).classList.remove('is-invalid');
+      document.querySelector(el).classList.remove('is-invalid');
+    });
   }
 }
 
