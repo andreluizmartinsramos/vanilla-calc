@@ -37,17 +37,38 @@ class Calculator {
    * Method to get the necessary input data to handleCalc()
    * @function getDataFromDOM
    * @description Fiil the object from DOM inputs: interestRate, loanAmount, yearsOfMortgage, annualTax, annualInsurance
-   * @return {Calculator}
+   * @return {Calculator|false} If all data is Ok return Calculator, case not returns false and populate the this.errors
    * */
   getDataFromDOM() {
+    const interestRate = document.querySelector('.rangeInterest__value').value;
+    const loanAmount = document.querySelector('.loan-row__value').value;
+    const yearsOfMortgage = document.querySelector('.rangeMortgage__value').value;
+    const annualTax = document.querySelector('.annualTax').value;
+    const annualInsurance = document.querySelector('.annualInsurance').value;
+
+    if (loanAmount == '' || loanAmount <= 0) {
+      this.errors.push({ field: '.loan-row__value', msg: 'Mandaroy numeric field' });
+    }
+
+    if (annualTax == '' || annualTax <= 0) {
+      this.errors.push({ field: '.annualTax', msg: 'Mandaroy numeric field' });
+    }
+
+    if (annualInsurance == '' || annualInsurance <= 0) {
+      this.errors.push({ field: '.annualInsurance', msg: 'Mandaroy numeric field' });
+    }
+
     this.data = {
-      interestRate: document.querySelector('.rangeInterest__value').value,
-      loanAmount: document.querySelector('.loan-row__value').value,
-      yearsOfMortgage: document.querySelector('.rangeMortgage__value').value,
-      annualTax: document.querySelector('.annualTax').value,
-      annualInsurance: document.querySelector('.annualInsurance').value,
+      interestRate,
+      loanAmount,
+      yearsOfMortgage,
+      annualTax,
+      annualInsurance,
     };
 
+    if (this.errors.length > 0) {
+      return false;
+    }
     return this;
   }
 
@@ -57,27 +78,33 @@ class Calculator {
    * @description The execute all process of calc. Process: cleanUp, getDataFromDOM, makeCalc and render.
    * */
   handleCalc() {
+    // Clean up all errors to start a new process
+    this.cleanErrors();
+
     // Prepare Object to execute new calc
     this.cleanUp();
 
     // Counts the values according the formula
-    const resultData = this.getDataFromDOM().makeCalc(this.data);
+    if (this.getDataFromDOM()) {
+      // Make all calcs callings the bussiness functions
+      const resultData = this.makeCalc(this.data);
 
-    // Render process
-    this.render(resultData);
+      // Render process
+      this.render(resultData);
 
-    console.log(resultData);
-
-    // DOM procedures to show data
-    document.querySelector('.calculator__button').innerHTML = 'RECALCULATE';
-    document.querySelector('.result').classList.remove('result--is-clean');
-    scrollIt(
-      300,
-      500,
-      (function () {
-        document.querySelector('.result').classList.add('result--is-open');
-      }()),
-    );
+      // DOM procedures to show data
+      document.querySelector('.calculator__button').innerHTML = 'RECALCULATE';
+      document.querySelector('.result').classList.remove('result--is-clean');
+      scrollIt(
+        300,
+        500,
+        (function () {
+          document.querySelector('.result').classList.add('result--is-open');
+        }()),
+      );
+    } else {
+      this.paintErrors();
+    }
   }
 
   /**
@@ -207,6 +234,38 @@ class Calculator {
     document.querySelector('.tax').innerHTML = `$ ${tax}`;
     document.querySelector('.insurance').innerHTML = `$ ${insurance}`;
     document.querySelector('.total').innerHTML = `$ ${totalMonthlyPayment}`;
+  }
+
+  /**
+   * Method to render the errors on DOM
+   * @function paintErrors
+   * @description Apply in all this.errors the 'is-invalid' modifier
+   * */
+
+  paintErrors() {
+    this.errors.forEach((e) => {
+      document.querySelector(`${e.field}--error`).innerHTML = e.msg;
+      document.querySelector(`${e.field}--error`).classList.add('is-invalid');
+      document.querySelector(e.field).classList.add('is-invalid');
+    });
+  }
+
+  /**
+   * Method to clena all errors
+   * @function cleanErrors
+   * @description Clean all errors from the screen and retake this.errors as a blank array
+   * */
+
+  cleanErrors() {
+    this.errors = [];
+
+    document.querySelector('.annualTax--error').classList.remove('is-invalid');
+    document.querySelector('.annualInsurance--error').classList.remove('is-invalid');
+    document.querySelector('.loan-row__value--error').classList.remove('is-invalid');
+
+    document.querySelector('.annualTax').classList.remove('is-invalid');
+    document.querySelector('.annualInsurance').classList.remove('is-invalid');
+    document.querySelector('.loan-row__value').classList.remove('is-invalid');
   }
 }
 

@@ -155,6 +155,19 @@
     background-color: #10689e;
   }
 }
+.calculator__error-msg {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+.calculator span.is-invalid {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+}
+.calculator input.is-invalid {
+  border: 1px solid red;
+}
 
 .interest-row span,
 .mortgage-row span {

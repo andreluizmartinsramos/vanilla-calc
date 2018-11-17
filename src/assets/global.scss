@@ -131,6 +131,7 @@ $highlight-color2: #006ea0;
         font-weight: bold;
         line-height: 1.67;
     }
+
     .final-value {
         border-top: 1px solid #cbcbcb;
         padding: 15px 0;
@@ -197,6 +198,22 @@ $highlight-color2: #006ea0;
             }
             animation: animation 0.5s;
         }
+    }
+
+    &__error-msg {
+        color: red;
+        font-weight: bold;
+        display: none;
+    }
+
+    span.is-invalid {
+        display: block;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    input.is-invalid {
+        border: 1px solid red;
     }
 }
 
