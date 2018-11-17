@@ -14,23 +14,21 @@ class Calculator {
   init() {
     this.cleanUp();
 
-    document.getElementById('btnCalc').addEventListener('click', () => this.handleCalc());
+    this.elements = [
+      '.rangeMortgage',
+      '.rangeInterest',
+      '.loan-row__value',
+      '.annualTax',
+      '.annualInsurance',
+    ];
 
-    document.querySelector('.rangeMortgage').addEventListener('input', (e) => {
-      this.cleanUp();
+    this.elements.map((el) => {
+      document.querySelector(el).addEventListener('input', (e) => {
+        this.cleanUp();
+      });
     });
-    document.querySelector('.rangeInterest').addEventListener('input', (e) => {
-      this.cleanUp();
-    });
-    document.querySelector('.loan-row__value').addEventListener('input', (e) => {
-      this.cleanUp();
-    });
-    document.querySelector('.annualTax').addEventListener('input', (e) => {
-      this.cleanUp();
-    });
-    document.querySelector('.annualInsurance').addEventListener('input', (e) => {
-      this.cleanUp();
-    });
+
+    document.getElementById('btnCalc').addEventListener('click', () => this.handleCalc());
   }
 
   /**
@@ -40,42 +38,35 @@ class Calculator {
    * @return {Calculator|false} If all data is Ok return Calculator, case not returns false and populate the this.errors
    * */
   getDataFromDOM() {
-    const interestRate = document.querySelector('.rangeInterest__value').value;
-    const loanAmount = document.querySelector('.loan-row__value').value;
-    const yearsOfMortgage = document.querySelector('.rangeMortgage__value').value;
-    const annualTax = document.querySelector('.annualTax').value;
-    const annualInsurance = document.querySelector('.annualInsurance').value;
+    let msgFull = '';
+    this.elements.map((el) => {
+      const value = document.querySelector(el).value;
 
-    if (loanAmount == '' || loanAmount <= 0) {
-      this.errors.push({
-        field: '.loan-row__value',
-        msgFull: 'Loan Amount is mandatory',
-        msgMobile: 'Mandatory filed',
-      });
-    }
+      if (value == '' || value <= 0) {
+        if (el == '.annualTax') {
+          msgFull = 'Annual Tax is mandatory';
+        }
+        if (el == '.loan-row__value') {
+          msgFull = 'Loan Amount is mandatory';
+        }
+        if (el == '.annualInsurance') {
+          msgFull = 'Annual Insurance is mandatory';
+        }
 
-    if (annualTax == '' || annualTax <= 0) {
-      this.errors.push({
-        field: '.annualTax',
-        msgFull: 'Annual Tax is mandatory',
-        msgMobile: 'Mandatory filed',
-      });
-    }
-
-    if (annualInsurance == '' || annualInsurance <= 0) {
-      this.errors.push({
-        field: '.annualInsurance',
-        msgFull: 'Annual Insurance is mandatory',
-        msgMobile: 'Mandatory filed',
-      });
-    }
+        this.errors.push({
+          field: el,
+          msgFull,
+          msgMobile: 'Mandatory field',
+        });
+      }
+    });
 
     this.data = {
-      interestRate,
-      loanAmount,
-      yearsOfMortgage,
-      annualTax,
-      annualInsurance,
+      interestRate: document.querySelector('.rangeInterest__value').value,
+      loanAmount: document.querySelector('.loan-row__value').value,
+      yearsOfMortgage: document.querySelector('.rangeMortgage__value').value,
+      annualTax: document.querySelector('.annualTax').value,
+      annualInsurance: document.querySelector('.annualInsurance').value,
     };
 
     if (this.errors.length > 0) {
