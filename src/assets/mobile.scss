@@ -6,7 +6,6 @@
  * Layout Style
  */
 .wrapper-page {
-
     &__wrapper-util {
         padding: 10px;
         overflow: hidden;
@@ -47,6 +46,15 @@
         background: #0077c0;
     }
 
+    &__error-msg,
+    &__error-mobile-msg {
+        display: none !important;
+    }
+
+    &__error-mobile-msg.is-invalid {
+        width: 100%;
+        display: block !important;
+    }
 }
 
 .interest-row,
@@ -74,12 +82,12 @@
     position: absolute;
 
     &--is-clean {
-        top:0px;
+        top: 0px;
     }
 
     &--is-open {
-        transition: top .5s;
-        top:430px;
+        transition: top 0.5s;
+        top: 430px;
     }
 
     &__title {

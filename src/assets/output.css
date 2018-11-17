@@ -155,15 +155,15 @@
     background-color: #10689e;
   }
 }
-.calculator__error-msg {
+.calculator__error-mobile-msg, .calculator__error-msg {
   color: red;
   font-weight: bold;
   display: none;
-}
-.calculator span.is-invalid {
-  display: block;
   width: 100%;
-  font-size: 12px;
+  font-size: 11px;
+}
+.calculator__error-msg.is-invalid {
+  display: block;
 }
 .calculator input.is-invalid {
   border: 1px solid red;

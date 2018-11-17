@@ -47,15 +47,27 @@ class Calculator {
     const annualInsurance = document.querySelector('.annualInsurance').value;
 
     if (loanAmount == '' || loanAmount <= 0) {
-      this.errors.push({ field: '.loan-row__value', msg: 'Mandaroy numeric field' });
+      this.errors.push({
+        field: '.loan-row__value',
+        msgFull: 'Loan Amount is mandatory',
+        msgMobile: 'Mandatory filed',
+      });
     }
 
     if (annualTax == '' || annualTax <= 0) {
-      this.errors.push({ field: '.annualTax', msg: 'Mandaroy numeric field' });
+      this.errors.push({
+        field: '.annualTax',
+        msgFull: 'Annual Tax is mandatory',
+        msgMobile: 'Mandatory filed',
+      });
     }
 
     if (annualInsurance == '' || annualInsurance <= 0) {
-      this.errors.push({ field: '.annualInsurance', msg: 'Mandaroy numeric field' });
+      this.errors.push({
+        field: '.annualInsurance',
+        msgFull: 'Annual Insurance is mandatory',
+        msgMobile: 'Mandatory filed',
+      });
     }
 
     this.data = {
@@ -244,7 +256,9 @@ class Calculator {
 
   paintErrors() {
     this.errors.forEach((e) => {
-      document.querySelector(`${e.field}--error`).innerHTML = e.msg;
+      document.querySelector(`${e.field}--error`).innerHTML = e.msgFull;
+      document.querySelector(`${e.field}--mobile-error`).innerHTML = e.msgMobile;
+      document.querySelector(`${e.field}--mobile-error`).classList.add('is-invalid');
       document.querySelector(`${e.field}--error`).classList.add('is-invalid');
       document.querySelector(e.field).classList.add('is-invalid');
     });
@@ -262,6 +276,10 @@ class Calculator {
     document.querySelector('.annualTax--error').classList.remove('is-invalid');
     document.querySelector('.annualInsurance--error').classList.remove('is-invalid');
     document.querySelector('.loan-row__value--error').classList.remove('is-invalid');
+
+    document.querySelector('.annualTax--mobile-error').classList.remove('is-invalid');
+    document.querySelector('.annualInsurance--mobile-error').classList.remove('is-invalid');
+    document.querySelector('.loan-row__value--mobile-error').classList.remove('is-invalid');
 
     document.querySelector('.annualTax').classList.remove('is-invalid');
     document.querySelector('.annualInsurance').classList.remove('is-invalid');

@@ -200,16 +200,17 @@ $highlight-color2: #006ea0;
         }
     }
 
+    &__error-mobile-msg,
     &__error-msg {
         color: red;
         font-weight: bold;
         display: none;
+        width: 100%;
+        font-size: 11px;
     }
 
-    span.is-invalid {
+    &__error-msg.is-invalid {
         display: block;
-        width: 100%;
-        font-size: 12px;
     }
 
     input.is-invalid {

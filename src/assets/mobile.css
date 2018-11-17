@@ -40,6 +40,13 @@
   height: 40px;
   background: #0077c0;
 }
+.calculator__error-msg, .calculator__error-mobile-msg {
+  display: none !important;
+}
+.calculator__error-mobile-msg.is-invalid {
+  width: 100%;
+  display: block !important;
+}
 
 .interest-row__value,
 .mortgage-row__value {
