@@ -1,11 +1,12 @@
-import scrollIt from './Scroll.js';
+// import scrollIt from './Scroll.js';
 
 /**
  * A module that manage the calculator issues
  * @module Calculator
  * @description Class to manage all features and behaviors os calculator
  */
-class Calculator {
+// class Calculator {
+const Calculator = {
   /**
    * Method to initialize the calculator
    * @function init
@@ -29,7 +30,7 @@ class Calculator {
     });
 
     document.getElementById('btnCalc').addEventListener('click', () => this.handleCalc());
-  }
+  },
 
   /**
    * Method to get the necessary input data to handleCalc()
@@ -73,7 +74,7 @@ class Calculator {
       return false;
     }
     return this;
-  }
+  },
 
   /**
    * Method that listen the actions comming btnCalc
@@ -108,7 +109,7 @@ class Calculator {
     } else {
       this.paintErrors();
     }
-  }
+  },
 
   /**
    * Method to clean attr of the object Calculator
@@ -134,7 +135,7 @@ class Calculator {
     document.querySelector('.result').classList.remove('result--is-open');
     document.querySelector('.result').classList.add('result--is-clean');
     this.render(resultData);
-  }
+  },
 
   /**
    * Method that execute and call all procudures to calc
@@ -176,7 +177,7 @@ class Calculator {
     } catch (e) {
       throw new Error(e);
     }
-  }
+  },
 
   /**
    * Method to calc the PrincipleInterest
@@ -195,7 +196,7 @@ class Calculator {
         / (1 - Math.pow(1 + interestRate / 100 / 12, -yearsOfMortgage * 12))
       ).toFixed(2),
     );
-  }
+  },
 
   /**
    * Method to calc the annualTax
@@ -207,7 +208,7 @@ class Calculator {
 
   calcTax(annualTax) {
     return Number((annualTax / 12).toFixed(2));
-  }
+  },
 
   /**
    * Method to calc the annualInsurance
@@ -219,7 +220,7 @@ class Calculator {
 
   calcInsurance(annualInsurance) {
     return Number((annualInsurance / 12).toFixed(2));
-  }
+  },
 
   /**
    * Method to render a resultData
@@ -237,7 +238,7 @@ class Calculator {
     document.querySelector('.tax').innerHTML = `$ ${tax}`;
     document.querySelector('.insurance').innerHTML = `$ ${insurance}`;
     document.querySelector('.total').innerHTML = `$ ${totalMonthlyPayment}`;
-  }
+  },
 
   /**
    * Method to render the errors on DOM
@@ -253,7 +254,7 @@ class Calculator {
       document.querySelector(`${e.field}--error`).classList.add('is-invalid');
       document.querySelector(e.field).classList.add('is-invalid');
     });
-  }
+  },
 
   /**
    * Method to clena all errors
@@ -269,7 +270,7 @@ class Calculator {
       document.querySelector(`${el}--mobile-error`).classList.remove('is-invalid');
       document.querySelector(el).classList.remove('is-invalid');
     });
-  }
-}
+  },
+};
 
-export default Calculator;
+// export default Calculator;
