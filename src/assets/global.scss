@@ -106,6 +106,13 @@ $highlight-color2: #006ea0;
     background-color: #eaf6fa;
     padding: 35px 45px;
 
+    &--is-open {
+        .result__value {
+            color: #333;
+            opacity: 1;
+        }
+    }
+
     &__title {
         font-size: 22px;
         font-weight: 1;
